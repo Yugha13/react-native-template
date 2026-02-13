@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function StatsRow() {
     return (
@@ -24,7 +25,7 @@ export default function StatsRow() {
                             justifyContent: 'center',
                             marginRight: 10,
                         }}>
-                        <Text style={{ fontSize: 16 }}>👟</Text>
+                        <MaterialCommunityIcons name="shoe-sneaker" size={18} color="#4A90D9" />
                     </View>
                     <Text style={{ color: '#8e8e8e', fontSize: 14, fontWeight: '500' }}>Daily Steps</Text>
                 </View>
@@ -58,7 +59,7 @@ export default function StatsRow() {
                             justifyContent: 'center',
                             marginRight: 10,
                         }}>
-                        <Text style={{ fontSize: 16 }}>💚</Text>
+                        <Ionicons name="heart" size={18} color="#4CD964" />
                     </View>
                     <Text style={{ color: '#8e8e8e', fontSize: 14, fontWeight: '500' }}>Heart Rate</Text>
                 </View>

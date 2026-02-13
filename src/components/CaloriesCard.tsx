@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-// Each day has two bars (left = orange, right = brown), with height percentages
 const BAR_DATA = [
     { left: 35, right: 50, isHighlight: false },
     { left: 30, right: 40, isHighlight: false },
@@ -46,7 +46,7 @@ export default function CaloriesCard() {
                             justifyContent: 'center',
                             marginRight: 10,
                         }}>
-                        <Text style={{ fontSize: 16 }}>🔥</Text>
+                        <Ionicons name="flame" size={18} color="#F47B20" />
                     </View>
                     <Text style={{ color: '#fff', fontSize: 16, fontWeight: '600' }}>Calories Burnt</Text>
                 </View>
@@ -77,16 +77,14 @@ export default function CaloriesCard() {
                                     alignItems: 'flex-end',
                                     gap: 3,
                                 }}>
-                                {/* Left bar (orange) */}
                                 <View
                                     style={{
                                         width: 14,
                                         height: leftH,
                                         borderRadius: 5,
-                                        backgroundColor: bar.isHighlight ? '#F47B20' : '#F47B20',
+                                        backgroundColor: '#F47B20',
                                     }}
                                 />
-                                {/* Right bar (brown) */}
                                 <View
                                     style={{
                                         width: 14,

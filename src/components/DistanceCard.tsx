@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Image, ImageSourcePropType } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 type Props = {
     runnerImage: ImageSourcePropType;
@@ -15,7 +16,7 @@ export default function DistanceCard({ runnerImage }: Props) {
                 minHeight: 210,
                 position: 'relative',
             }}>
-            {/* Runner Image — positioned on the right */}
+            {/* Runner Image */}
             <Image
                 source={runnerImage}
                 style={{
@@ -29,21 +30,21 @@ export default function DistanceCard({ runnerImage }: Props) {
                 resizeMode="contain"
             />
 
-            {/* Content overlay */}
+            {/* Content */}
             <View style={{ padding: 22, zIndex: 10 }}>
                 {/* Title Row */}
                 <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 16 }}>
                     <View
                         style={{
-                            width: 36,
-                            height: 36,
-                            borderRadius: 18,
-                            backgroundColor: 'rgba(255,255,255,0.25)',
+                            width: 38,
+                            height: 38,
+                            borderRadius: 19,
+                            backgroundColor: 'rgba(255,255,255,0.22)',
                             alignItems: 'center',
                             justifyContent: 'center',
                             marginRight: 10,
                         }}>
-                        <Text style={{ fontSize: 16 }}>🏃</Text>
+                        <Ionicons name="footsteps" size={18} color="#fff" />
                     </View>
                     <Text style={{ color: '#fff', fontSize: 16, fontWeight: '600' }}>Your Distance</Text>
                 </View>
@@ -78,7 +79,7 @@ export default function DistanceCard({ runnerImage }: Props) {
                             justifyContent: 'center',
                             marginLeft: 8,
                         }}>
-                        <Text style={{ color: '#fff', fontSize: 12 }}>⬆</Text>
+                        <Ionicons name="arrow-up" size={12} color="#fff" />
                     </View>
                 </View>
             </View>

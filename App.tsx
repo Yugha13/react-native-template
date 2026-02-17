@@ -1,17 +1,13 @@
+import { ScreenContent } from 'src/components/ScreenContent';
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import './global.css';
 
-import Home from './src/pages/Home';
-
-const runnerImage = require('./assets/runner.png');
-
 export default function App() {
   return (
-    <SafeAreaProvider>
-      <Home runnerImage={runnerImage} />
-      <StatusBar style="light" />
-    </SafeAreaProvider>
+    <>
+      <ScreenContent title="Home" path="App.tsx"></ScreenContent>
+      <StatusBar style="auto" />
+    </>
   );
 }

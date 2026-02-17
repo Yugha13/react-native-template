@@ -1,91 +1,10 @@
 import React from 'react';
-import { View, Text, ScrollView, TouchableOpacity, ImageSourcePropType } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { Ionicons } from '@expo/vector-icons';
+import { View, Text } from 'react-native';
 
-import DistanceCard from '../components/DistanceCard';
-import StatsRow from '../components/StatsRow';
-import CaloriesCard from '../components/CaloriesCard';
-import BottomBar from '../components/BottomBar';
-
-type Props = {
-    runnerImage: ImageSourcePropType;
-};
-
-export default function Home({ runnerImage }: Props) {
+export default function Home() {
     return (
-        <View style={{ flex: 1, backgroundColor: '#1a1a1a' }}>
-            <SafeAreaView style={{ flex: 1 }}>
-                <ScrollView
-                    style={{ flex: 1 }}
-                    showsVerticalScrollIndicator={false}
-                    contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 100 }}>
-                    {/* Header */}
-                    <View
-                        style={{
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                            justifyContent: 'space-between',
-                            marginTop: 10,
-                            marginBottom: 24,
-                        }}>
-                        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                            <Text
-                                style={{ color: '#fff', fontSize: 26, fontWeight: '800', letterSpacing: -0.5 }}>
-                                Runnit.
-                            </Text>
-                            <Ionicons
-                                name="walk"
-                                size={24}
-                                color="#F47B20"
-                                style={{ marginLeft: 6 }}
-                            />
-                        </View>
-                        <TouchableOpacity
-                            style={{
-                                width: 46,
-                                height: 46,
-                                borderRadius: 23,
-                                backgroundColor: '#252525',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                            }}
-                            activeOpacity={0.7}>
-                            <Ionicons name="notifications" size={20} color="#F47B20" />
-                        </TouchableOpacity>
-                    </View>
-
-                    {/* Greeting */}
-                    <Text style={{ color: '#8e8e8e', fontSize: 16, marginBottom: 6 }}>
-                        Good work for today, Jennie 🔥
-                    </Text>
-
-                    {/* Main Title */}
-                    <Text
-                        style={{
-                            color: '#fff',
-                            fontSize: 34,
-                            fontWeight: '800',
-                            lineHeight: 42,
-                            letterSpacing: -0.5,
-                            marginBottom: 26,
-                        }}>
-                        Run Your Way to{'\n'}Better Health
-                    </Text>
-
-                    {/* Distance Card */}
-                    <DistanceCard runnerImage={runnerImage} />
-
-                    {/* Stats Row */}
-                    <StatsRow />
-
-                    {/* Calories Card */}
-                    <CaloriesCard />
-                </ScrollView>
-            </SafeAreaView>
-
-            {/* Floating Bottom Bar */}
-            <BottomBar />
+        <View className="flex-1 justify-center items-center bg-white">
+            <Text className="text-xl font-bold">Welcome to the Home Page!</Text>
         </View>
     );
 }

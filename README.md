@@ -1,3 +1,2 @@
 # react-native-template
-# run-it
-# run-it
+# react-native-template
